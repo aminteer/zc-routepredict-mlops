@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/zc-routepredict-mlops/cohorts/2025/02-experiment-tracking/homework/mlruns/158336008616170173/486729485d6745939d49b1cfc3a9666d/artifacts
+end_time: 1757538707565
+entry_point_name: ''
+experiment_id: '158336008616170173'
+lifecycle_stage: active
+run_id: 486729485d6745939d49b1cfc3a9666d
+run_name: brawny-eel-851
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757538689520
+status: 3
+tags: []
+user_id: codespace

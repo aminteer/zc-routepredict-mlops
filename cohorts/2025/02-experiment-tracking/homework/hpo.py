@@ -34,11 +34,21 @@ def run_optimization(data_path: str, num_trials: int):
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
 
     def objective(params):
-
-        rf = RandomForestRegressor(**params)
-        rf.fit(X_train, y_train)
-        y_pred = rf.predict(X_val)
-        rmse = root_mean_squared_error(y_val, y_pred)
+        with mlflow.start_run():
+            mlflow.set_tag("developer", "Andy M")
+            mlflow.set_tag("model", "RandomForestRegressor")
+            # mlflow.sklearn.autolog()
+            mlflow.log_param("data_path", data_path)
+            mlflow.log_param("num_trials", num_trials)
+            mlflow.log_params(params)
+            
+            rf = RandomForestRegressor(**params)
+            rf.fit(X_train, y_train)
+            y_pred = rf.predict(X_val)
+            rmse = root_mean_squared_error(y_val, y_pred)
+            
+            mlflow.log_metric("rmse", rmse)
+            mlflow.sklearn.log_model(rf, artifact_name="models")
 
         return {'loss': rmse, 'status': STATUS_OK}
 

@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/zc-routepredict-mlops/cohorts/2025/02-experiment-tracking/homework/mlruns/158336008616170173/models/m-0eacb38749d34ea5893c18d41ad11749/artifacts
+creation_timestamp: 1757538702806
+experiment_id: '158336008616170173'
+last_updated_timestamp: 1757538705376
+model_id: m-0eacb38749d34ea5893c18d41ad11749
+model_type: null
+name: model
+source_run_id: 486729485d6745939d49b1cfc3a9666d
+status: 2
+status_message: null
