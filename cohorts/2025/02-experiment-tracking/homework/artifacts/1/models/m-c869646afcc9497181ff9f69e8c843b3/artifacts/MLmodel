@@ -1,0 +1,22 @@
+artifact_path: /workspaces/zc-routepredict-mlops/cohorts/2025/02-experiment-tracking/homework/artifacts/1/models/m-c869646afcc9497181ff9f69e8c843b3/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.3.2
+model_id: m-c869646afcc9497181ff9f69e8c843b3
+model_size_bytes: 1803408
+model_uuid: m-c869646afcc9497181ff9f69e8c843b3
+prompts: null
+run_id: c25e86f83a7d4aaf9a19c858c67952a4
+utc_time_created: '2025-09-10 21:38:30.828995'
