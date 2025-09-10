@@ -1,0 +1,28 @@
+artifact_path: /workspaces/zc-routepredict-mlops/cohorts/2025/02-experiment-tracking/homework/artifacts/2/models/m-edc5997047e24876a72b3a02ab1211ae/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-edc5997047e24876a72b3a02ab1211ae
+model_size_bytes: 2524668
+model_uuid: m-edc5997047e24876a72b3a02ab1211ae
+prompts: null
+run_id: ae4cc1225ae445398fb9dd404ef6df13
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 5702]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-10 21:54:58.418611'
