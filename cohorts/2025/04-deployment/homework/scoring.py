@@ -53,6 +53,7 @@ def save_results(df, y_pred, year, month, output_file):
         compression=None,
         index=False
     )
+    return df
     
 def run(year, month):
     input_file = f'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{year:04d}-{month:02d}.parquet'
@@ -64,9 +65,12 @@ def run(year, month):
     
     
 if __name__ == "__main__":
-    run(args.year, args.month)
+    results = run(args.year, args.month)
 
     # For debugging purposes
+    
+    # print average prediction
+    print(f'Average prediction: {results['prediction'].mean()}')
 
     # print(y_pred)
 
